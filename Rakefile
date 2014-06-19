@@ -16,9 +16,9 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "monsterid"
   gem.homepage = "http://github.com/knutaldrin/monsterid"
-  gem.license = "MIT"
+  gem.license = "CC BY 4.0"
   gem.summary = %Q{Generates tiny little monsters to discern users.}
-  gem.description = %Q{Port of the php script, with new monsters from the WP plugin}
+  gem.description = %Q{Port/rework of the php script, with new monsters snatched from the WP plugin}
   gem.email = "knutaldrin@gmail.com"
   gem.authors = ["Knut Aldrin Wikström"]
   # dependencies defined in Gemfile
