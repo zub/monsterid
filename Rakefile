@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "monsterid"
   gem.homepage = "http://github.com/knutaldrin/monsterid"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Generates tiny little monsters to discern users.}
+  gem.description = %Q{Port of the php script, with new monsters from the WP plugin}
   gem.email = "knutaldrin@gmail.com"
   gem.authors = ["Knut Aldrin Wikström"]
   # dependencies defined in Gemfile
