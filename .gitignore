@@ -1,3 +1,6 @@
+# Precompiled files
+lib/precomp
+
 # rcov generated
 coverage
 coverage.data
