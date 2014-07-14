@@ -136,9 +136,10 @@ class MonsterID
     @monster.to_datastream
   end
 
-  def to_data_uri
-    'data:image/png;base64,' +
-    Base64.strict_encode64(@monster.to_datastream.to_s)
+  def to_data_url
+    @monster.to_data_url
+    #'data:image/png;base64,' +
+    #Base64.strict_encode64(@monster.to_datastream.to_s)
   end
   
   def inspect
