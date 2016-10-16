@@ -136,7 +136,7 @@ class MonsterID
   end
   
   def id
-    @monster.id
+    @id
   end
 
   def to_data_url
