@@ -146,20 +146,19 @@ class MonsterID
   def inspect
     "#<#{self.class.name}:#{object_id} id: #{@id}>"
   end
-  
+
   private
 
   def colorise(img, hue, sat = 255)
+    sat = sat.to_f / 255 # ChunkyPNG uses sat from 0.0 to 1.0
+
     img.pixels.map! do |px|
-      pxrgb = Color::RGB.new(ChunkyPNG::Color.r(px),
-                             ChunkyPNG::Color.g(px),
-                             ChunkyPNG::Color.b(px))
-      pxhsl = pxrgb.to_hsl
-      pxhsl.saturation = sat
-      pxhsl.hue = hue
-      newrgb = pxhsl.to_rgb
-      
-      ChunkyPNG::Color.rgba(newrgb.red.to_i, newrgb.green.to_i, newrgb.blue.to_i, ChunkyPNG::Color.a(px))
+      h, s, v, a = ChunkyPNG::Color.to_hsv(px, true)
+
+      h = hue
+      s = sat
+
+      ChunkyPNG::Color.from_hsv(h, s, v, a)
     end
 
     img
