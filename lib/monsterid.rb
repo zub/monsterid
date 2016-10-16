@@ -1,7 +1,6 @@
 require 'oily_png'
 require 'digest'
 require 'color'
-require 'base64'
 
 # Generates cute monsters from a seed
 class MonsterID
@@ -135,11 +134,13 @@ class MonsterID
   def to_datastream
     @monster.to_datastream
   end
+  
+  def id
+    @monster.id
+  end
 
   def to_data_url
     @monster.to_data_url
-    #'data:image/png;base64,' +
-    #Base64.strict_encode64(@monster.to_datastream.to_s)
   end
   
   def inspect
