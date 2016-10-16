@@ -1,8 +1,8 @@
 0.3:
   - Remove jeweler dependency and all the shit that comes with it
   - Remove unused files
-  - 50% performance boost in coloring algorithm
-  - Removed 'color' dependency
+  - Use ChunkyPNG colors instead of 'Color' gem, netting a 50% performance increase!
+  - Use HSV instead of HSL, making the monsters not look over-exposed.
   - Conform to some best practices with gem packaging (like only specifying dependencies once)
 
 0.2:
