@@ -1,8 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "monsterid"
-  s.version = "0.2.0"
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.version = File.read("VERSION").strip
   s.require_paths = ["lib"]
   s.authors = ["Knut Aldrin"]
   s.date = "2016-10-16"
@@ -18,11 +16,10 @@ Gem::Specification.new do |s|
     "VERSION",
     "CHANGELOG",
     "lib/monsterid.rb",
-    "lib/parts/*.png"
-  ]  
+  ] + Dir.glob("lib/parts/*.png")
 
-  s.homepage = "http://github.com/knutaldrin/monsterid"
-  s.licenses = ["CC BY 4.0"]
+  s.homepage = "https://github.com/knutaldrin/monsterid"
+  s.licenses = ["CC-BY-4.0"]
   s.summary = "Generates tiny little monsters to discern users."
   
   s.add_runtime_dependency 'oily_png', '~> 1.2', '>= 1.2.1'
