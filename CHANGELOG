@@ -1,0 +1,13 @@
+0.3:
+  - Remove jeweler dependency and all the shit that comes with it
+  - Remove unused files
+  - 50% performance boost in coloring algorithm
+  - Removed 'color' dependency
+  - Conform to some best practices with gem packaging (like only specifying dependencies once)
+
+0.2:
+  - Let ChunkyPNG handle data url generation
+  - Some documentation
+
+0.1:
+  - First release
