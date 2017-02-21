@@ -3,7 +3,6 @@ Gem::Specification.new do |s|
   s.version = File.read("VERSION").strip
   s.require_paths = ["lib"]
   s.authors = ["Knut Aldrin"]
-  s.date = "2016-10-16"
   s.description = "Port/rework of the php script, with new monsters snatched from the WP plugin"
   s.email = "knutaldrin@gmail.com"
   s.extra_rdoc_files = [
