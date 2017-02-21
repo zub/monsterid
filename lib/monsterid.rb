@@ -1,6 +1,5 @@
 require 'oily_png'
 require 'digest'
-require 'color'
 
 # Generates cute monsters from a seed
 class MonsterID
