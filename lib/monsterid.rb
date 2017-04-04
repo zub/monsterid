@@ -1,4 +1,10 @@
-require 'oily_png'
+# Load oily_png if available, otherwise default to pure ruby chunky_png
+begin
+  require 'oily_png'
+rescue LoadError
+  require 'chunky_png'
+end
+
 require 'digest'
 
 # Generates cute monsters from a seed

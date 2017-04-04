@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.licenses = ["CC-BY-4.0"]
   s.summary = "Generates tiny little monsters to discern users."
   
-  s.add_runtime_dependency 'oily_png', '~> 1.2', '>= 1.2.1'
+  s.add_runtime_dependency 'chunky_png', '~> 1.3', '>= 1.3.7'
   
   s.add_development_dependency 'bundler', '~> 1.0'
   s.add_development_dependency 'rubocop', '~> 0.44.1'
