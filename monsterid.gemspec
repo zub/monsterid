@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   
   s.add_runtime_dependency 'chunky_png', '~> 1.3', '>= 1.3.7'
   
-  s.add_development_dependency 'bundler', '~> 1.0'
-  s.add_development_dependency 'rubocop', '~> 0.49'
+  s.add_development_dependency 'bundler', '>= 2.1.0'
+  s.add_development_dependency 'rubocop', '~> 1.14'
 end
 
