@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Load oily_png if available, otherwise default to pure ruby chunky_png
 begin
   require 'oily_png'
@@ -15,18 +17,18 @@ class MonsterID
     'legs_4.png', 'legs_S8.png', 'legs_S11.png', 'mouth_5.png',
     'mouth_8.png', 'mouth_S1.png', 'mouth_S3.png', 'mouth_2.png',
     'eyes_13.png', 'legs_S13.png', 'mouth_S7.png'
-  ]
+  ].freeze
   BODY_COLOR_PARTS = [
     'arms_S8.png', 'legs_S5.png',
     'mouth_S5.png', 'mouth_S4.png'
-  ]
+  ].freeze
   SPECIFIC_COLOR_PARTS = {
     'arms_S2.png' => [0, 200],
     'hair_S6.png' => [0, 200],
     'mouth_9.png' => [0, 200],
     'mouth_6.png' => [0, 200],
     'mouth_S2.png' => [0, 200]
-  }
+  }.freeze
 
   PARTS = {
     arms: [
@@ -63,7 +65,7 @@ class MonsterID
       'mouth_S1.png', 'mouth_S2.png', 'mouth_S3.png', 'mouth_S4.png', 'mouth_S5.png',
       'mouth_S6.png', 'mouth_S7.png'
     ]
-  }
+  }.freeze
 
   # Remove body 12 for now, doesn't look good
   PARTS[:body].delete('body_12.png')
@@ -74,7 +76,7 @@ class MonsterID
     [24, 191], [208, 191], [40, 255], [208, 64],
     [48, 64], [248, 191], [72, 127], [272, 64],
     [128, 255], [312, 191], [160, 255], [336, 255]
-  ]
+  ].freeze
 
   def initialize(seed, size = 120)
     @id = Digest::SHA1.hexdigest seed.to_s
@@ -150,15 +152,11 @@ class MonsterID
 
   private
 
-  def colorise(img, hue, sat = 255)
-    sat = sat.to_f / 255 # ChunkyPNG uses sat from 0.0 to 1.0
+  def colorise(img, h, s = 255)
+    s = s.to_f / 255 # ChunkyPNG uses sat from 0.0 to 1.0
 
     img.pixels.map! do |px|
-      h, s, v, a = ChunkyPNG::Color.to_hsv(px, true)
-
-      h = hue
-      s = sat
-
+      _, _, v, a = ChunkyPNG::Color.to_hsv(px, true)
       ChunkyPNG::Color.from_hsv(h, s, v, a)
     end
 

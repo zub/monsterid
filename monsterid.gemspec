@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name = 'monsterid'
   s.version = File.read('VERSION').strip
@@ -20,6 +22,8 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/knutaldrin/monsterid'
   s.licenses = ['CC-BY-4.0']
   s.summary = 'Generates tiny little monsters to discern users.'
+
+  s.required_ruby_version = '>= 2.0'
 
   s.add_runtime_dependency 'chunky_png', '~> 1.4'
 
