@@ -1,3 +1,8 @@
+0.4.2:
+  - Dependency bumps due to security issues
+  - Rubocop style fixes
+  - String freeze
+
 0.4.0:
   - Depend on ChunkyPNG, not OilyPNG, thus not requiring a C extension
 
